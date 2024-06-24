@@ -4,7 +4,7 @@ metadata:
   name: bookapp-ingress
   namespace: bookapp-namespace
   annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"  # Ensure this matches your ingress controller
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
   - http:
