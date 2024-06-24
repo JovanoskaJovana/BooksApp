@@ -57,7 +57,7 @@
     <form method="post" action="/author">
         <ul th:each="book : ${books}">
             <li>
-                <input type="radio" name="bookIsbn" th:value="${book.getIsbn()}">
+<!--                <input type="radio" name="bookIsbn" th:value="${book.getIsbn()}">-->
                 <span th:text="'Title: ' + ${book.getTitle()} + ' Genre: ' + ${book.getGenre()} + ' Year: ' + ${book.getYear()} + ' BookStore: ' + ${book.getBookStore()?.getName()}"></span>
                 <th:block>
                     <a th:href="@{'/books/edit/{id}' (id=${book.getId()})}" class="button">
@@ -87,8 +87,8 @@
 
             </li>
         </ul>
-        <a href="books/filter" class="button">Filter Reviews</a><br/>
-        <input type='submit' value='Submit'>
+<!--        <a href="books/filter" class="button">Filter Reviews</a><br/>-->
+<!--        <input type='submit' value='Submit'>-->
     </form>
 </main>
 </body>
