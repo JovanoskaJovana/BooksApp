@@ -4,6 +4,7 @@ metadata:
   name: bookapp-config
   namespace: bookapp-namespace
 data:
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://postgres-db:5432/book-store"
+  SPRING_DATASOURCE_USERNAME: "postgres"
   SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
-  SPRING_PROFILES_ACTIVE: "prod"
 
