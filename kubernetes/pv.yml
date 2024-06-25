@@ -3,11 +3,13 @@ kind: PersistentVolume
 metadata:
   name: postgres-pv
   labels:
-    name: postgres-pv
+    type: local
 spec:
   capacity:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: /var/lib/docker/volumes/booksapp_postgres-data/_data
+  storageClassName: manual
