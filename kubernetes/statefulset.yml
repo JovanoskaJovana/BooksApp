@@ -38,13 +38,10 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: postgres-storage
+      namespace: bookapp-namespace
     spec:
+      storageClassName: local-path
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 10Gi
-      volumeName: postgres-pv
-      storageClassName: manual
-      selector:
-        matchLabels:
-          type: local
+          storage: 1Gi
